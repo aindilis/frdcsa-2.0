@@ -1,0 +1,209 @@
+(FRDCSA 2.0)
+
+(talk to Jess/Duke about ideas)
+(start an effort to create the new version of the FRDCSA
+ simultaneous with the effort to package the old version)
+(Every codebase will be in its own version control repository
+ (see that YAPC NA 2013 lecture which talked about ways to
+  control multiple repos at once))
+(External codebases and other artifacts will be stored using KBFS)
+(It will be designed for multiple people to develop it)
+(We will assemble a team of developers for it)
+(Perl will not be the only language it is coded in)
+(There will be a set of VMs running many different operating
+ systems that we use to test that it works cross platform.  Do a
+ complete installation on a vanilla vm etc.)
+(set up Jenkins in order to handle testing of the
+ FRDCSA2 (although it uses Java, not sure we want that, but...))
+(Teaching tools will be part of its repertoire)
+(There will be a system to organize requirements)
+(There will be different responsibilities within the project,
+ including but not limited to developer, manager, QA analyst, etc.
+ People will take up different responsibilities as needed)
+(We will use TDD (test driven development), or at least test
+ multiple systems)
+(We will have references for agile development
+ (We will use user stories etc))
+(We will have a system to track official developers, probably
+ LDAP)
+(We will use POSI or whatever we decide to call it to organize
+ development efforts of lots of individuals)
+(Commit messages will be relatively detailed)
+(We will have appropriate cybersecurity measures)
+(Make an Emacs interface to a lot of the FRDCSA2)
+(Address the concern of how to develop so that future releases do
+ not overwrite the contents of current releases, or some such
+ thing)
+(develop a centralized application logging system using Log4Perl
+ or something, for better logging of all of our apps)
+(make this standard:
+ use File::Which 'which';
+ $WHICH_TESSERACT = which('tesseract');
+ )
+(distribute frdcsa code data via torrents)
+(use tracker to store license information)
+(automatically have project sites at github, sourceforge,
+ freshmeat, etc if possible)
+(chown it properly to the myfrdcsa user/group, get permissions correct)
+(see /var/lib/myfrdcsa/codebases/internal/digilib/data/collections/perl/yapc/na/2013/talks/Continuously-integrating-Perl-projects-with-Vagrant-and-Puppet/to.do)
+
+
+(Every function written in Perl that is not anonymous will have documentation written in pod)
+
+(should have an agent for packaging software)
+(should have successive releases)
+
+(should be segmented intelligently)
+
+(should have intelligent mechanisms storing the development
+ servers so that others can take over development, save for some
+ secrets which could be released)
+
+(should be a model of the requirements specification)
+(software from FRDCSAv1 should be used to analyze the requirements and generate models of the potential solutions)
+(all the hosting requirements about the frdcsa should be made formal and explicit and physical systems implemented that meet the policy)
+
+
+
+
+(The entire project shall be self hosting, in that it should be
+ relatively trivial for someone to download and replicate the
+ FRDCSA "development environment" (need to come up with the right
+				   word as that's wrong, it's not what the developer would use to
+				   develop applications, it's the platform that hosts the FRDCSA)
+ such as it's bug tracker, system deployments, etc.)
+(The development project shall be designed with a schema such
+ that it is possible for different versions of the FRDCSA hosting
+ platform to work together.  For instance, with the way that the
+ unilang databases have been forked from time to time, but there
+ is no way in FreeKBS2 to distinguish unilang entries from 1
+ place versus another)
+(All files shall be indexed according to the metadata of where
+ they were acquired and what the license was under which they
+ were acquired.  Downloaded files shall if possible have a record
+ of the web traffic that downloaded them, things like that.  We
+ want full auditing of where files came from, what their license
+ is for perfect license compliance.)
+(All software that is part of the FRDCSA Hosting Platform shall
+ be FSF compliant.)
+(The systems should probably be hosted on TriSquel)
+(The directories of the FRDCSA should be thoroughly organized and
+ the relationships should be established as a model of the
+ requirements specification)
+(The requirements shall be hosted in stet initially for there to
+ be some debate about them)
+(If a system that is going to be indexed by the program has a
+ non-FSF compliant license, then it can still be packaged and a package made as for Debian GNU/Linux or similar.  )
+(All known software, including proprietary software, may be indexed)
+(Proprietary software should be related in the ontology to
+ software that has preferably an FSF approved license, or at
+ least a DFSG approved license that provides similar capabilities
+ or can be considered to partially or fully replace the
+ proprietary software, or a new project created which has as its
+ goal to reconceive of that software in a free software fashion)
+(All DFSG approved software that is not FSF approved shall be
+ linked in the ontology to FSF approved replacements)
+(Petitions shall be started for all software that is not FSF
+ approved for the authors of that software to re-release the
+ software under FSF approved licenses, and the arguments if any
+ provided by those who defend the lack of release should be
+ mapped using argumentation software, and checked for veracity,
+ and if possible defeaters can be found)
+(The petition system shall make use of a system which argues on
+ behalf of the user (similar to the bLeaf application) so that
+ everyone need not vote or sign every petition, but that their
+ intent may be established from their known positions (using
+						       practical and ethical reasoning) and votes and signatures
+ semi-automatically established)
+(Semantic Web software shall be used as much as is possible to
+ help with the ontologizing of the software index)
+(All Perl software shall be designed to work with the existing
+ Perl Naming conventions)
+(All Emacs functions declared with defun should have a doc
+ string)
+(Ask David Hand about scripts to deploy machine for next FRDCSA)
+(Possibly all downloads should be done to the system automatically)
+(If a piece of software comes with a test set 
+ (possibly a separate download) and it can be used for regression
+ testing, set it up)
+(If an artifact has a license that allows it, allow for it to be
+ downloaded from FWeb)
+(Integrate POSI into the FRDCSA)
+(Should all commands on the system be recorded.)
+(Forms of release
+ (automatically constructed VM distribution of Panoply v2)
+ (Debian, Redhat, Windows, Slackware, Ubuntu, etc etc packages for all internal codebases (get rid of distinction between minor and internal))
+ (CPAN modules for Perl software, in correct Perlish namespaces)
+ (Maven, Gems, etc for all other languages)
+ (github or gitorious or something git copies)
+ (source downloads)
+ (figure out the data section this time around, how to store that properly)
+ (automatically constructed (scripted construction) hosting environment)
+ )
+(Team members
+ (someone who knows the Perlish namespaces well enough)
+ )
+(Test infrastructure
+ (Regression tests for all Perl module)
+ (Read existing perl and get a perl expert on board to review the work and decisions)
+ )
+(Incorporate POSI into the FRDCSA)
+(Maybe make the FRDCSA peer to peer for p2p deployments and software collection, etc, have it synchronize, etc)
+(Make sure we have appropriate security for the project)
+(Avoid a hack like the recursive gnu compiler hack)
+(have actual minor mode key bindings where appropriate)
+(make the frdcsa2 available via i2p for users to comment about
+ how it should be designed with fear of repercussions) 
+(contact the lady at Google telling her about the new FRDCSA
+ version and inviting her to work with me)
+(planned integration with nepomuk or a custom replacement)
+(invite developers such as Paul M, B. Wasley, Ed M., to
+ collaborate on the FRDCSAv2)
+
+(write tests for FRDCSAv1 programs and then use the tests with
+ some modifications for TDD for FRDCSAv2 programs)
+(requirements and terminology will be managed by a controlled
+ language like ACE, and the hopefully the software will be proven
+ to comply with the specification)
+(arrange mirrors through the world)
+(figure out how to have perl code that I am developing be running
+ on the development machine and simultaneously be being packaged,
+ or whatever)
+(figure out the role of Perlbrew and tests against multiple versions of Perl)
+(develop documentation about Perl, Java etc environments within FRDCSAv2)
+(ITS that teaches Perl)
+(look into Perl 6 integration with FRDCSAv2)
+(have a policy for android integration)
+(get a Debian developer to assist with the FRDCSA Debian Policy)
+(every packages should be build in a jail)
+(find out how to set up a read only password for git
+ (? http://scie.nti.st/2007/11/14/hosting-git-repositories-the-easy-and-secure-way/ ?)
+ )
+(use ACE CNL for starters, then have fall backs to more expressive formalisms)
+
+(configuration files should be 600)
+
+
+(
+ (Develop the <PROJECTNAME> Vagrant Bootstrap VagrantFile which is
+  hosted in a git repository, which, given a system with Vagrant
+  already correctly installed, creates a virtual machine using
+  vagrant which has vagrant all setup, i.e. it installs the
+  packages for vagrant etc.  Give this machine a temporary working
+  hostname of vagrant.<PROJECTNAME>.org)
+
+ (Then develop the <PROJECTNAME> Hosting Platform Vagrantfile,
+  which runs on vagrant.<PROJECTNAME>.org which creates several
+  new VMs representing the entire <PROJECTNAME> hos ting
+  platform, i.e. machines like the git repository, the webserver,
+  etc.  All of that (even if for starters that's just one VM
+  called say hosting.<PROJECTNAME>.org))
+
+ (Then develop the <PROJECTNAME> Installer Vagrantfile, which
+  runs on the hosting.<PROJECTNAME>.org (cluster) and sets up a new
+  installation of <PROJECTNAME> for end users to use)
+
+ (From the <PROJECTNAME> Installer Vagrantfile, develop an
+  installer which does not require vagrant which installs
+  <PROJECTNAME> on a vanilla computer)
+ )

@@ -1,0 +1,9 @@
+http://honk.sigxcpu.org/projects/git-buildpackage/manual-html/gbp.intro.html
+http://honk.sigxcpu.org/projects/git-buildpackage/manual-html/gbp.import.html#GBP.IMPORT.UPSTREAM-GIT
+http://wiki.debian.org/HowToSetupADebianRepository
+http://www.eyrie.org/~eagle/notes/debian/git.html#publish
+https://osl.uoregon.edu/redmine/projects/netdot/wiki/DebianPerlPackaging_
+http://pkg-perl.alioth.debian.org/git.html
+http://wiki.debian.org/HowToPackageForDebian
+http://www.debian.org/doc/packaging-manuals/perl-policy/
+http://www.debian-administration.org/articles/336
